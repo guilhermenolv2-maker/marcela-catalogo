@@ -22,9 +22,8 @@ export function HeroBanner() {
           <h1 className="font-display text-5xl font-semibold leading-tight text-ink sm:text-6xl lg:text-7xl">
             Marcela Lopes
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-8 text-ink/75 sm:text-lg">
-            Produtos selecionados para autocuidado, presentes e casa, com pedido simples e rápido
-            pelo WhatsApp.
+          <p className="mt-5 max-w-xl text-base leading-8 text-ink/75 [text-shadow:0_1px_2px_rgba(61,54,64,0.22)] sm:text-lg">
+            Produtos selecionados para autocuidado, com pedido simples e rápido pelo WhatsApp.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link

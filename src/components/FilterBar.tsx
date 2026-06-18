@@ -11,7 +11,7 @@ type FilterBarProps = {
 
 export function FilterBar({ category, sort, onCategoryChange, onSortChange }: FilterBarProps) {
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
+    <>
       <label className="block">
         <span className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-ink/55">
           <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
@@ -48,6 +48,6 @@ export function FilterBar({ category, sort, onCategoryChange, onSortChange }: Fi
           <option value="name">Nome</option>
         </select>
       </label>
-    </div>
+    </>
   );
 }

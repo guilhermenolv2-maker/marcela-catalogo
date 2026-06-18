@@ -29,13 +29,13 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://instagram.com/marcellalopes"
+                href="https://instagram.com/marcellallopess"
                 target="_blank"
                 rel="noreferrer"
                 className="flex gap-2 transition hover:text-gold"
               >
                 <Instagram className="h-4 w-4 text-gold" aria-hidden="true" />
-                @marcellalopes
+                @marcellallopess
               </a>
             </li>
             <li className="flex gap-2">

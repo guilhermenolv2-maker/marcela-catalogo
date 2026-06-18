@@ -4,7 +4,7 @@ import { Breadcrumb } from '../components/Breadcrumb';
 
 const contactItems = [
   { icon: MessageCircle, label: 'WhatsApp', value: '(38) 99821-0135' },
-  { icon: Instagram, label: 'Instagram', value: '@marcellalopes' },
+  { icon: Instagram, label: 'Instagram', value: '@marcellallopess' },
   { icon: MapPin, label: 'Endereço', value: 'Capoeirão' },
   { icon: Timer, label: 'Horário', value: 'Segunda a sexta, 9h às 18h. Sábado, 9h às 13h.' },
 ];
