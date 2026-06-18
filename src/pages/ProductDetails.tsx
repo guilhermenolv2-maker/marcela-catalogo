@@ -72,7 +72,7 @@ export function ProductDetails() {
                 {product.stock} unidades em estoque
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 space-y-4 sm:flex sm:flex-wrap sm:items-center sm:gap-4 sm:space-y-0">
                 <div className="flex items-center rounded-full bg-mist p-1" aria-label="Quantidade">
                   <button
                     type="button"
@@ -92,22 +92,24 @@ export function ProductDetails() {
                     <Plus className="h-5 w-5" aria-hidden="true" />
                   </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={handleAddToCart}
-                  className="rounded-full bg-ink px-7 py-4 text-sm font-bold text-white shadow-soft transition hover:bg-gold hover:text-ink"
-                >
-                  Adicionar ao carrinho
-                </button>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-bold text-ink shadow-soft transition hover:bg-rose"
-                >
-                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                  Comprar agora
-                </a>
+                <div className="grid w-full grid-cols-2 gap-3 sm:flex sm:w-auto sm:gap-4">
+                  <button
+                    type="button"
+                    onClick={handleAddToCart}
+                    className="min-h-14 rounded-full bg-ink px-3 py-3 text-xs font-bold leading-tight text-white shadow-soft transition hover:bg-gold hover:text-ink sm:px-7 sm:py-4 sm:text-sm"
+                  >
+                    Adicionar ao carrinho
+                  </button>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gold px-3 py-3 text-xs font-bold leading-tight text-ink shadow-soft transition hover:bg-rose sm:px-7 sm:py-4 sm:text-sm"
+                  >
+                    <MessageCircle className="h-6 w-6 shrink-0" aria-hidden="true" />
+                    Comprar agora
+                  </a>
+                </div>
               </div>
 
               <button

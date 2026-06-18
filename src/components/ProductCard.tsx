@@ -59,20 +59,20 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addItem(product)}
-              className="relative z-20 inline-flex items-center justify-center gap-1 rounded-full bg-rose px-2 py-2 text-[11px] font-bold text-ink transition hover:bg-gold"
+              className="relative z-20 inline-flex items-center justify-center gap-0.5 rounded-full bg-rose px-1 py-2 text-[10px] font-bold text-ink transition hover:bg-gold sm:gap-1 sm:px-2 sm:text-[11px]"
               aria-label={`Adicionar ${product.name} ao carrinho`}
             >
-              <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+              <ShoppingCart className="hidden h-4 w-4 shrink-0 sm:block" aria-hidden="true" />
               Adicionar
             </button>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="relative z-20 inline-flex items-center justify-center gap-1 rounded-full bg-ink px-2 py-2 text-[11px] font-bold text-white transition hover:bg-gold hover:text-ink"
+              className="relative z-20 inline-flex items-center justify-center gap-0.5 rounded-full bg-ink px-1 py-2 text-[10px] font-bold text-white transition hover:bg-gold hover:text-ink sm:gap-1 sm:px-2 sm:text-[11px]"
               aria-label={`Comprar ${product.name} pelo WhatsApp`}
             >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
               Comprar
             </a>
           </div>
