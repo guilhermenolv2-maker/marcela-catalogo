@@ -19,23 +19,28 @@ export function ProductCard({ product }: ProductCardProps) {
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group overflow-hidden rounded-3xl bg-white shadow-soft"
+      className="group relative overflow-hidden rounded-3xl bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-glow"
     >
-      <Link to={`/produtos/${product.slug}`} aria-label={`Ver detalhes de ${product.name}`}>
-        <div className="relative aspect-[1/1] overflow-hidden bg-mist">
-          <img
-            src={product.images[0]}
-            alt={product.name}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
-          {product.promotion && (
-            <span className="absolute left-3 top-3 rounded-full bg-white/92 px-2 py-1 text-[10px] font-bold text-ink shadow-glow">
-              {product.promotion}
-            </span>
-          )}
-        </div>
+      <Link
+        to={`/produtos/${product.slug}`}
+        className="absolute inset-0 z-10 rounded-3xl"
+        aria-label={`Ver detalhes de ${product.name}`}
+      >
+        <span className="sr-only">Ver detalhes de {product.name}</span>
       </Link>
+      <div className="relative aspect-[1/1] overflow-hidden bg-mist">
+        <img
+          src={product.images[0]}
+          alt={product.name}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        {product.promotion && (
+          <span className="absolute left-3 top-3 rounded-full bg-white/92 px-2 py-1 text-[10px] font-bold text-ink shadow-glow">
+            {product.promotion}
+          </span>
+        )}
+      </div>
       <div className="space-y-2 p-3">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-wide text-gold">
@@ -50,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addItem(product)}
-              className="inline-flex items-center justify-center gap-1 rounded-full bg-rose px-2 py-2 text-[11px] font-bold text-ink transition hover:bg-gold"
+              className="relative z-20 inline-flex items-center justify-center gap-1 rounded-full bg-rose px-2 py-2 text-[11px] font-bold text-ink transition hover:bg-gold"
               aria-label={`Adicionar ${product.name} ao carrinho`}
             >
               <ShoppingCart className="h-4 w-4" aria-hidden="true" />
@@ -60,7 +65,7 @@ export function ProductCard({ product }: ProductCardProps) {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-1 rounded-full bg-ink px-2 py-2 text-[11px] font-bold text-white transition hover:bg-gold hover:text-ink"
+              className="relative z-20 inline-flex items-center justify-center gap-1 rounded-full bg-ink px-2 py-2 text-[11px] font-bold text-white transition hover:bg-gold hover:text-ink"
               aria-label={`Comprar ${product.name} pelo WhatsApp`}
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />

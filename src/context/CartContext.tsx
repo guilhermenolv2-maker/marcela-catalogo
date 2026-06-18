@@ -5,7 +5,7 @@ import type { Product } from '../types/product';
 import { CartContext } from './cartContextValue';
 
 export function CartProvider({ children }: PropsWithChildren) {
-  const [items, setItems] = useLocalStorage<CartItemType[]>('bella-cart', []);
+  const [items, setItems] = useLocalStorage<CartItemType[]>('marcela-lopes-cart', []);
   const [isOpen, setIsOpen] = useState(false);
 
   const addItem = useCallback(

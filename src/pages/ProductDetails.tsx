@@ -1,4 +1,4 @@
-import { Minus, Plus, Ruler } from 'lucide-react';
+import { MessageCircle, Minus, Plus, Ruler } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import { useMemo, useState } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
@@ -10,6 +10,7 @@ import { RelatedProducts } from '../components/RelatedProducts';
 import { Toast } from '../components/Toast';
 import { products } from '../data/products';
 import { useCart } from '../hooks/useCart';
+import { buildWhatsappUrl } from '../services/whatsapp';
 import { formatCurrency } from '../utils/format';
 
 export function ProductDetails() {
@@ -42,6 +43,8 @@ export function ProductDetails() {
     window.setTimeout(() => setShowToast(false), 2200);
   };
 
+  const whatsappUrl = buildWhatsappUrl([{ product, quantity }], product.price * quantity);
+
   return (
     <>
       <Helmet>
@@ -62,8 +65,12 @@ export function ProductDetails() {
               <p className="text-sm font-bold uppercase tracking-wide text-gold">{categoryName}</p>
               <h1 className="mt-2 font-display text-5xl font-semibold text-ink">{product.name}</h1>
               <p className="mt-4 text-lg leading-8 text-ink/70">{product.fullDescription}</p>
-              <strong className="mt-6 block text-3xl text-ink">{formatCurrency(product.price)}</strong>
-              <p className="mt-2 text-sm font-semibold text-ink/55">{product.stock} unidades em estoque</p>
+              <strong className="mt-6 block text-3xl text-ink">
+                {formatCurrency(product.price)}
+              </strong>
+              <p className="mt-2 text-sm font-semibold text-ink/55">
+                {product.stock} unidades em estoque
+              </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <div className="flex items-center rounded-full bg-mist p-1" aria-label="Quantidade">
@@ -92,6 +99,15 @@ export function ProductDetails() {
                 >
                   Adicionar ao carrinho
                 </button>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-bold text-ink shadow-soft transition hover:bg-rose"
+                >
+                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                  Comprar agora
+                </a>
               </div>
 
               <button
@@ -109,14 +125,20 @@ export function ProductDetails() {
         </div>
       </section>
 
-      <Modal isOpen={isModalOpen} title="Atendimento personalizado" onClose={() => setIsModalOpen(false)}>
+      <Modal
+        isOpen={isModalOpen}
+        title="Atendimento personalizado"
+        onClose={() => setIsModalOpen(false)}
+      >
         <p className="leading-7 text-ink/70">
-          Após enviar o pedido pelo WhatsApp, nossa equipe confirma disponibilidade, prazo de entrega,
-          endereço e forma de pagamento. Não há pagamento online neste catálogo.
+          Após enviar o pedido pelo WhatsApp, nossa equipe confirma disponibilidade, prazo de
+          entrega, endereço e forma de pagamento. Não há pagamento online neste catálogo.
         </p>
       </Modal>
 
-      <AnimatePresence>{showToast && <Toast message="Produto adicionado ao carrinho" />}</AnimatePresence>
+      <AnimatePresence>
+        {showToast && <Toast message="Produto adicionado ao carrinho" />}
+      </AnimatePresence>
     </>
   );
 }

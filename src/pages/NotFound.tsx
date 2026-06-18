@@ -17,7 +17,7 @@ export function NotFound() {
           to="/"
           className="mt-8 inline-flex rounded-full bg-ink px-7 py-4 text-sm font-bold text-white"
         >
-          Voltar para a home
+          Voltar para o início
         </Link>
       </div>
     </section>

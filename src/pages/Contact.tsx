@@ -14,7 +14,7 @@ export function Contact() {
     <>
       <Helmet>
         <title>Contato | Marcela Lopes</title>
-        <meta name="description" content="Fale com a Bella Atelier pelo WhatsApp, Instagram ou Facebook." />
+        <meta name="description" content="Fale com Marcela Lopes pelo WhatsApp ou Instagram." />
       </Helmet>
 
       <section className="bg-gradient-to-b from-ice to-white px-4 py-12 sm:px-6 lg:px-8">
@@ -23,10 +23,12 @@ export function Contact() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="text-sm font-bold uppercase tracking-wide text-gold">Contato</p>
-              <h1 className="mt-2 font-display text-5xl font-semibold text-ink">Vamos conversar?</h1>
+              <h1 className="mt-2 font-display text-5xl font-semibold text-ink">
+                Vamos conversar?
+              </h1>
               <p className="mt-4 leading-7 text-ink/70">
-                Tire dúvidas, confirme disponibilidade dos produtos e combine entrega diretamente com
-                atendimento humano.
+                Tire dúvidas, confirme disponibilidade dos produtos e combine entrega diretamente
+                com atendimento humano.
               </p>
               <a
                 href="https://wa.me/5538998210135"
@@ -40,7 +42,10 @@ export function Contact() {
 
             <div className="grid gap-4">
               {contactItems.map((item) => (
-                <article key={item.label} className="flex gap-4 rounded-[2rem] bg-white p-5 shadow-soft">
+                <article
+                  key={item.label}
+                  className="flex gap-4 rounded-[2rem] bg-white p-5 shadow-soft"
+                >
                   <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-rose text-ink">
                     <item.icon className="h-5 w-5" aria-hidden="true" />
                   </div>

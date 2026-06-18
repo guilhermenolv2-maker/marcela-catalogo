@@ -16,17 +16,31 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-gold">Atendimento</h2>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
-            <li className="flex gap-2">
-              <MessageCircle className="h-4 w-4 text-gold" aria-hidden="true" />
-              WhatsApp: (11) 99999-9999
+            <li>
+              <a
+                href="https://wa.me/5538998210135"
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-2 transition hover:text-gold"
+              >
+                <MessageCircle className="h-4 w-4 text-gold" aria-hidden="true" />
+                WhatsApp: (38) 99821-0135
+              </a>
             </li>
-            <li className="flex gap-2">
-              <Instagram className="h-4 w-4 text-gold" aria-hidden="true" />
-              @bellaatelier
+            <li>
+              <a
+                href="https://instagram.com/marcellalopes"
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-2 transition hover:text-gold"
+              >
+                <Instagram className="h-4 w-4 text-gold" aria-hidden="true" />
+                @marcellalopes
+              </a>
             </li>
             <li className="flex gap-2">
               <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
-              Rua das Flores, 120 - São Paulo
+              Capoeirão
             </li>
           </ul>
         </div>
