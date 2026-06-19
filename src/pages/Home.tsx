@@ -4,13 +4,25 @@ import { Link } from 'react-router-dom';
 import { CategoryCard } from '../components/CategoryCard';
 import { HeroBanner } from '../components/HeroBanner';
 import { ProductCard } from '../components/ProductCard';
-import { categories, products } from '../data/products';
+import { availableCategories, products } from '../data/products';
 
 const benefits = [
-  { icon: Sparkles, title: 'Curadoria premium', text: 'Produtos escolhidos com atenção ao detalhe.' },
+  {
+    icon: Sparkles,
+    title: 'Curadoria premium',
+    text: 'Produtos escolhidos com atenção ao detalhe.',
+  },
   { icon: Gift, title: 'Presenteável', text: 'Opções prontas para datas especiais.' },
-  { icon: HeartHandshake, title: 'Atendimento humano', text: 'Pedido confirmado diretamente pelo WhatsApp.' },
-  { icon: ShieldCheck, title: 'Compra simples', text: 'Sem cadastro, sem login e sem etapas desnecessárias.' },
+  {
+    icon: HeartHandshake,
+    title: 'Atendimento humano',
+    text: 'Pedido confirmado diretamente pelo WhatsApp.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Compra simples',
+    text: 'Sem cadastro, sem login e sem etapas desnecessárias.',
+  },
 ];
 
 export function Home() {
@@ -41,7 +53,10 @@ export function Home() {
               <p className="text-sm font-bold uppercase tracking-wide text-gold">Destaques</p>
               <h2 className="mt-2 font-display text-4xl font-semibold text-ink">Mais desejados</h2>
             </div>
-            <Link to="/produtos" className="text-sm font-bold text-ink underline decoration-gold underline-offset-4">
+            <Link
+              to="/produtos"
+              className="text-sm font-bold text-ink underline decoration-gold underline-offset-4"
+            >
               Ver todos os produtos
             </Link>
           </div>
@@ -57,10 +72,12 @@ export function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-wide text-gold">Categorias</p>
-            <h2 className="mt-2 font-display text-4xl font-semibold text-ink">Escolha por momento</h2>
+            <h2 className="mt-2 font-display text-4xl font-semibold text-ink">
+              Escolha por momento
+            </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {categories.map((category) => (
+            {availableCategories.map((category) => (
               <CategoryCard key={category.id} category={category} />
             ))}
           </div>

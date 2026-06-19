@@ -1,5 +1,5 @@
 import { SlidersHorizontal } from 'lucide-react';
-import { categories } from '../data/products';
+import { availableCategories } from '../data/products';
 import type { SortOption } from '../types/product';
 
 type FilterBarProps = {
@@ -24,7 +24,7 @@ export function FilterBar({ category, sort, onCategoryChange, onSortChange }: Fi
           aria-label="Filtrar por categoria"
         >
           <option value="todos">Todas</option>
-          {categories.map((item) => (
+          {availableCategories.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
             </option>

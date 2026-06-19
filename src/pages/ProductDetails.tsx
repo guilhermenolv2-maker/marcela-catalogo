@@ -1,6 +1,6 @@
 import { MessageCircle, Minus, Plus, Ruler } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import { Breadcrumb } from '../components/Breadcrumb';
@@ -20,6 +20,12 @@ export function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    setQuantity(1);
+    setIsModalOpen(false);
+    setShowToast(false);
+  }, [slug]);
 
   const categoryName = useMemo(() => {
     if (!product) return '';

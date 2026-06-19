@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState, type PropsWithChildren } from 'react';
+import { useCallback, useEffect, useMemo, useState, type PropsWithChildren } from 'react';
+import { products } from '../data/products';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import type { CartItemType } from '../types/cart';
 import type { Product } from '../types/product';
@@ -7,6 +8,33 @@ import { CartContext } from './cartContextValue';
 export function CartProvider({ children }: PropsWithChildren) {
   const [items, setItems] = useLocalStorage<CartItemType[]>('marcela-lopes-cart', []);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setItems((currentItems) => {
+      const synchronizedItems = currentItems.flatMap((item) => {
+        const currentProduct = products.find((product) => product.id === item.product.id);
+
+        if (!currentProduct || currentProduct.stock < 1) return [];
+
+        return [
+          {
+            product: currentProduct,
+            quantity: Math.min(Math.max(item.quantity, 1), currentProduct.stock),
+          },
+        ];
+      });
+
+      const isUnchanged =
+        synchronizedItems.length === currentItems.length &&
+        synchronizedItems.every(
+          (item, index) =>
+            item.product === currentItems[index].product &&
+            item.quantity === currentItems[index].quantity,
+        );
+
+      return isUnchanged ? currentItems : synchronizedItems;
+    });
+  }, [setItems]);
 
   const addItem = useCallback(
     (product: Product, quantity = 1) => {

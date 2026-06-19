@@ -5,32 +5,36 @@ export const categories: Category[] = [
     id: 'acessorios',
     name: 'Acessórios',
     description: 'Peças delicadas para finalizar o look.',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80',
+    image:
+      'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'beleza',
     name: 'Beleza',
     description: 'Cuidados premium para uma rotina luminosa.',
-    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+    image:
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'decor',
     name: 'Vestuário',
     description: 'Peças selecionadas para compor looks delicados.',
-    image: 'https://images.unsplash.com/photo-1513094735237-8f2714d57c13?auto=format&fit=crop&w=900&q=80',
+    image:
+      'https://images.unsplash.com/photo-1513094735237-8f2714d57c13?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'diversos',
     name: 'Produtos diversos',
     description: 'Itens variados para completar o catálogo.',
-    image: ' https://www.assai.com.br/sites/default/files/fundo_rosa_com_bolsa_e_produtos_de_maquiagem_diversos_-_produtos_de_beleza_-_assai_atacadista.jpg',
-   
+    image:
+      ' https://www.assai.com.br/sites/default/files/fundo_rosa_com_bolsa_e_produtos_de_maquiagem_diversos_-_produtos_de_beleza_-_assai_atacadista.jpg',
   },
   {
     id: 'presentes',
     name: 'Presentes',
     description: 'Kits prontos para encantar.',
-    image: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=80',
+    image:
+      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=80',
   },
 ];
 
@@ -47,10 +51,7 @@ export const products: Product[] = [
     stock: 5,
     featured: true,
     promotion: 'Mais vendido',
-    images: [
-      'https://http2.mlstatic.com/D_NQ_NP_833817-MLB103878770279_012026-O.webp',
-    
-    ],
+    images: ['https://http2.mlstatic.com/D_NQ_NP_833817-MLB103878770279_012026-O.webp'],
   },
   {
     id: '2',
@@ -59,7 +60,7 @@ export const products: Product[] = [
     description: 'Fragrância marcante e elegante para todos os momentos.',
     fullDescription:
       'Fragrância marcante e sofisticada, com aroma envolvente que proporciona frescor e elegância para o dia a dia.',
-    price: 18.00,
+    price: 18.0,
     category: 'beleza',
     stock: 8,
     featured: true,
@@ -71,9 +72,9 @@ export const products: Product[] = [
     id: '3',
     slug: 'kit-miss-lary',
     name: 'Kit Body Splash + Hidrat + Perf. Capilar Miss Lary Love Intenso',
-    description: 'Aroma lavanda com toque floral em copo de vidro fosco.',
+    description: 'Kit perfumado com fragrância envolvente para corpo e cabelos.',
     fullDescription:
-      'Vela aromática de queima limpa, ideal para criar uma atmosfera calma, sofisticada e acolhedora no quarto, lavabo ou sala.',
+      'Kit Miss Lary Love Intenso com body splash, hidratante corporal e perfume capilar. Uma combinação com fragrância marcante para cuidar, perfumar e completar sua rotina de autocuidado.',
     price: 56.0,
     category: 'beleza',
     stock: 18,
@@ -81,7 +82,6 @@ export const products: Product[] = [
     promotion: '10% off no combo',
     images: [
       'https://cdn.awsli.com.br/2500x2500/2521/2521305/produto/400660701/prancheta-26-g2am22ot0d.png',
-     
     ],
   },
   {
@@ -91,15 +91,12 @@ export const products: Product[] = [
     description: 'Brilho intenso e hidratação para lábios macios e radiantes.',
     fullDescription:
       'Proporciona brilho intenso, hidratação e um acabamento delicado, deixando os lábios macios, radiantes e ainda mais bonitos.',
-    price: 12.00,
+    price: 12.0,
     category: 'beleza',
     stock: 6,
     featured: true,
     promotion: 'Edição limitada',
-    images: [
-      'https://m.media-amazon.com/images/I/61+ex5KmnYL.jpg',
-  
-    ],
+    images: ['https://m.media-amazon.com/images/I/61+ex5KmnYL.jpg'],
   },
   {
     id: '5',
@@ -112,25 +109,20 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 20,
     featured: false,
-    images: [
-      'https://http2.mlstatic.com/D_NQ_NP_727176-MLA92888077752_092025-O.webp',
-     
-    ],
+    images: ['https://http2.mlstatic.com/D_NQ_NP_727176-MLA92888077752_092025-O.webp'],
   },
   {
     id: '6',
     slug: 'rimel-pink21',
     name: 'Rímel Incolor Pink21',
     description: 'Modela os cílios com efeito natural.',
-    fullDescription:
-      'Define e modela os cílios, proporcionando um acabamento natural e delicado.',
+    fullDescription: 'Define e modela os cílios, proporcionando um acabamento natural e delicado.',
     price: 12.0,
     category: 'beleza',
     stock: 14,
     featured: false,
     images: [
       'https://mercadomake.com.br/wp-content/uploads/2023/09/CS-3658_mascara-de-cilios-incolor-invisible-pink-21.jpg',
-    
     ],
   },
   {
@@ -144,10 +136,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: false,
-    images: [
-      'https://http2.mlstatic.com/D_NQ_NP_710728-MLB83060034739_032025-O.webp',
-
-    ],
+    images: ['https://http2.mlstatic.com/D_NQ_NP_710728-MLB83060034739_032025-O.webp'],
   },
   {
     id: '8',
@@ -156,13 +145,16 @@ export const products: Product[] = [
     description: 'Realça e define os traços do rosto com acabamento natural e sofisticado.',
     fullDescription:
       'Com tons versáteis e de fácil aplicação, o Quarteto de Contorno ajuda a realçar e definir os traços do rosto, proporcionando um acabamento natural e sofisticado. Ideal para criar profundidade e valorizar a maquiagem em qualquer ocasião.',
-    price: 15.00,
+    price: 15.0,
     category: 'beleza',
     stock: 9,
     featured: false,
     images: [
       'https://cdn.awsli.com.br/2500x2500/2492/2492933/produto/343432050/fe157dce2bf8401ca1e259c399f82dc0-1eskx19aec.jpg',
-    
     ],
   },
 ];
+
+export const availableCategories = categories.filter((category) =>
+  products.some((product) => product.category === category.id),
+);

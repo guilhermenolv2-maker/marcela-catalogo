@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ProductGalleryProps = {
   images: string[];
@@ -7,6 +7,10 @@ type ProductGalleryProps = {
 
 export function ProductGallery({ images, productName }: ProductGalleryProps) {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+
+  useEffect(() => {
+    setSelectedImage(images[0]);
+  }, [images]);
 
   return (
     <div className="space-y-4">
