@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CategoryCard } from '../components/CategoryCard';
 import { HeroBanner } from '../components/HeroBanner';
 import { ProductCard } from '../components/ProductCard';
-import { availableCategories, products } from '../data/products';
+import { categories, products } from '../data/products';
 
 const benefits = [
   {
@@ -77,7 +77,7 @@ export function Home() {
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {availableCategories.map((category) => (
+            {categories.map((category) => (
               <CategoryCard key={category.id} category={category} />
             ))}
           </div>

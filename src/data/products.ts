@@ -154,7 +154,3 @@ export const products: Product[] = [
     ],
   },
 ];
-
-export const availableCategories = categories.filter((category) =>
-  products.some((product) => product.category === category.id),
-);
