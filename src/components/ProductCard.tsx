@@ -43,10 +43,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
       <div className="flex flex-1 flex-col p-3">
         <div>
-          <p className="text-[10px] font-semibold uppercase tracking-wide text-gold">
-            {product.stock} em estoque
-          </p>
-          <h2 className="mt-1 line-clamp-2 min-h-10 text-sm font-bold leading-5 text-ink">
+          <h2 className="line-clamp-2 min-h-10 text-sm font-bold leading-5 text-ink">
             {product.name}
           </h2>
           <p className="mt-1 line-clamp-2 min-h-10 text-xs leading-5 text-ink/65">

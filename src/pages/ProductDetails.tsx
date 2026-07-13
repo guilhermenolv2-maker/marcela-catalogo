@@ -74,9 +74,6 @@ export function ProductDetails() {
               <strong className="mt-6 block text-3xl text-ink">
                 {formatCurrency(product.price)}
               </strong>
-              <p className="mt-2 text-sm font-semibold text-ink/55">
-                {product.stock} unidades em estoque
-              </p>
 
               <div className="mt-8 space-y-4 sm:flex sm:flex-wrap sm:items-center sm:gap-4 sm:space-y-0">
                 <div className="flex items-center rounded-full bg-mist p-1" aria-label="Quantidade">

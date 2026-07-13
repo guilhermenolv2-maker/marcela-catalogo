@@ -50,8 +50,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-balm-gloss-mel-abelha-glow-love.png'],
+    images: ['/products/lip-balm-gloss-mel-abelha-glow-love.webp'],
   },
   {
     id: '12',
@@ -64,8 +63,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-oil-pop-star-ruby-rose.png'],
+    images: ['/products/lip-oil-pop-star-ruby-rose.webp'],
   },
   {
     id: '13',
@@ -78,8 +76,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-gloss-bobbi-rara-ice-cream.png'],
+    images: ['/products/lip-gloss-bobbi-rara-ice-cream.webp'],
   },
   {
     id: '14',
@@ -92,8 +89,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/choco-chilli-lip-gloss.png'],
+    images: ['/products/choco-chilli-lip-gloss.webp'],
   },
   {
     id: '15',
@@ -106,8 +102,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lipgloss-magic-fruits-pink21.png'],
+    images: ['/products/lipgloss-magic-fruits-pink21.webp'],
   },
   {
     id: '16',
@@ -120,8 +115,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/gloss-cherry.png'],
+    images: ['/products/gloss-cherry.webp'],
   },
   {
     id: '17',
@@ -134,8 +128,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/gloss-febella.png'],
+    images: ['/products/gloss-febella.webp'],
   },
   {
     id: '18',
@@ -148,8 +141,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/gloss-melancia-vivai.png'],
+    images: ['/products/gloss-melancia-vivai.webp'],
   },
   {
     id: '19',
@@ -162,8 +154,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/fabulous-gloss-mega-volume-labial.png'],
+    images: ['/products/fabulous-gloss-mega-volume-labial.webp'],
   },
   {
     id: '20',
@@ -176,8 +167,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/gloss-fofinho-stitch.png'],
+    images: ['/products/gloss-fofinho-stitch.webp'],
   },
   {
     id: '21',
@@ -190,8 +180,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-gloss-capivara-flor.png'],
+    images: ['/products/lip-gloss-capivara-flor.webp'],
   },
   {
     id: '22',
@@ -204,8 +193,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-oil-candy-menta-max-love.png'],
+    images: ['/products/lip-oil-candy-menta-max-love.webp'],
   },
   {
     id: '23',
@@ -218,8 +206,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-oil-melancia-dapop.png'],
+    images: ['/products/lip-oil-melancia-dapop.webp'],
   },
   {
     id: '9',
@@ -232,8 +219,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-gloss-chaveiro-capivara.png'],
+    images: ['/products/lip-gloss-chaveiro-capivara.webp'],
   },
   {
     id: '10',
@@ -246,8 +232,7 @@ export const products: Product[] = [
     category: 'beleza',
     stock: 10,
     featured: true,
-    promotion: 'Novidade',
-    images: ['/products/lip-gloss-com-glitter.png'],
+    images: ['/products/lip-gloss-com-glitter.webp'],
   },
   {
     id: '1',
